@@ -1,17 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Arsenal&family=Jura:wght@500&display=swap" rel="stylesheet">
+    <!-- styles -->
+    <link rel="stylesheet" href="<%= BASE_URL %>css/style.css">
+    <!-- fa -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+    <title>Around Sound</title>
   </head>
   <body>
     <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
+      <strong>We're sorry but AroundSound doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>    
+    <audio id="audio" type="audio/mpeg"></audio>
+    <div id="app" id='df'></div>    
+    <!-- JavaScript -->
+    <script src="/js/player.js"></script>
   </body>
 </html>

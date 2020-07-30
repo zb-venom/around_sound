@@ -1,0 +1,27 @@
+body {
+    background-color: rgb(42, 42, 42);
+    margin: 0;
+    padding: 0;
+    display: grid;
+    /* font-family: 'Jura', sans-serif; */
+    font-family: 'Arsenal', sans-serif;
+}
+
+a, a:active {
+    text-decoration: none;
+    color: lightgray;
+} 
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: rgb(34, 34, 34);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ab83bb;
+    border-radius: 9em; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #9b65b1;
+}
