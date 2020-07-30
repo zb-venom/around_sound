@@ -159,11 +159,13 @@ export default {
                     vm.track = vm.playlist[vm.current];
                     audio.src = vm.playlist[vm.current].url; 
                     audio.dataset.hash = vm.playlist[vm.current].hash[0];
+                    vm.$store.commit('setPlay', vm.playlist[vm.current].hash[0]);
                     document.getElementById('play-control').innerHTML = '<i class="fa fa-play" aria-hidden="true"></i>';
                 }
                 else { 
                     audio.src = vm.playlist[vm.current].url; 
                     audio.dataset.hash = vm.playlist[vm.current].hash[0];
+                    vm.$store.commit('setPlay', vm.playlist[vm.current].hash[0]);
                     audio.play(); 
                     document.getElementById('play-control').innerHTML = '<i class="fa fa-pause" aria-hidden="true"></i>'
                 }
@@ -174,7 +176,7 @@ export default {
                     if (vm.playlist[vm.current].hash[0] == tracks[i].id) {
                         tracks[i].classList.add('active');
                     }
-                    if (vm.playlist[vm.current - 1].hash == tracks[i].id) {
+                    if (vm.playlist[vm.current - 1].hash[0] == tracks[i].id) {
                         tracks[i].classList.remove('active');
                     }
                 }
